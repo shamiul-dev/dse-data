@@ -1,0 +1,350 @@
+[
+  {
+    "#": "1",
+    "trading_code": "ALLTEX",
+    "company_name": "Alltex Industries Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "2",
+    "trading_code": "ANLIMAYARN",
+    "company_name": "Anlimayarn Dyeing Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "3",
+    "trading_code": "ARAMITCEM",
+    "company_name": "Aramit Cement Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "4",
+    "trading_code": "ATLASBANG",
+    "company_name": "Atlas Bangladesh Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "5",
+    "trading_code": "AZIZPIPES",
+    "company_name": "Aziz Pipes Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "6",
+    "trading_code": "BIFC",
+    "company_name": "Bangladesh Industrial Fin. Co. Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "7",
+    "trading_code": "BDSERVICE",
+    "company_name": "Bangladesh Services Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "8",
+    "trading_code": "BARKAPOWER",
+    "company_name": "Baraka Power Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "9",
+    "trading_code": "BPML",
+    "company_name": "Bashundhara Paper Mills Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "10",
+    "trading_code": "BAYLEASING",
+    "company_name": "Bay Leasing & Investment Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "11",
+    "trading_code": "BDTHAIFOOD",
+    "company_name": "BD Thai Food & Beverage Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "12",
+    "trading_code": "CENTRALPHL",
+    "company_name": "Central Pharmaceuticals Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "13",
+    "trading_code": "DULAMIACOT",
+    "company_name": "Dulamia Cotton Spinning Mills Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "14",
+    "trading_code": "FAREASTFIN",
+    "company_name": "Fareast Finance & Investment Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "15",
+    "trading_code": "FASFIN",
+    "company_name": "FAS Finance & Investment Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "16",
+    "trading_code": "FIRSTFIN",
+    "company_name": "First Finance Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "17",
+    "trading_code": "FIRSTSBANK",
+    "company_name": "First Security Islami Bank PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "18",
+    "trading_code": "GBBPOWER",
+    "company_name": "GBB Power Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "19",
+    "trading_code": "GHCL",
+    "company_name": "Global Heavy Chemicals Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "20",
+    "trading_code": "GSPFINANCE",
+    "company_name": "GSP Finance Company (Bangladesh) PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "21",
+    "trading_code": "ICBIBANK",
+    "company_name": "ICB Islamic Bank Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "22",
+    "trading_code": "IBP",
+    "company_name": "Indo-Bangla Pharmaceuticals Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "23",
+    "trading_code": "INTECH",
+    "company_name": "Intech Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "24",
+    "trading_code": "ILFSL",
+    "company_name": "International Leasing & Financial Services Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "25",
+    "trading_code": "ISLAMICFIN",
+    "company_name": "Islamic Finance & Investment PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "26",
+    "trading_code": "JUTESPINN",
+    "company_name": "Jute Spinners Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "27",
+    "trading_code": "KBPPWBIL",
+    "company_name": "Khan Brothers PP Woven Bag Industries Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "28",
+    "trading_code": "KPCL",
+    "company_name": "Khulna Power Company Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "29",
+    "trading_code": "KPPL",
+    "company_name": "Khulna Printing & Packaging Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "30",
+    "trading_code": "MEGHNACEM",
+    "company_name": "Meghna Cement Mills PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "31",
+    "trading_code": "MEGCONMILK",
+    "company_name": "Meghna Condensed Milk Industries Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "32",
+    "trading_code": "MEGHNAPET",
+    "company_name": "Meghna Pet Industries Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "33",
+    "trading_code": "METROSPIN",
+    "company_name": "Metro Spinning Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "34",
+    "trading_code": "MITHUNKNIT",
+    "company_name": "Mithun Knitting and Dyeing Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "35",
+    "trading_code": "NTC",
+    "company_name": "National Tea Company Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "36",
+    "trading_code": "PDL",
+    "company_name": "Pacific Denims Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "37",
+    "trading_code": "PADMALIFE",
+    "company_name": "Padma Islami Life Insurance Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "38",
+    "trading_code": "PLFSL",
+    "company_name": "Peoples Leasing and Fin. Services Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "39",
+    "trading_code": "PHOENIXFIN",
+    "company_name": "Phoenix Finance and Investments Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "40",
+    "trading_code": "PREMIERLEA",
+    "company_name": "Premier Leasing & Finance Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "41",
+    "trading_code": "PRIMEFIN",
+    "company_name": "Prime Finance & Investment Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "42",
+    "trading_code": "PRIMETEX",
+    "company_name": "Prime Textile Spinning Mills Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "43",
+    "trading_code": "RSRMSTEEL",
+    "company_name": "Ratanpur Steel Re-Rolling Mills Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "44",
+    "trading_code": "RINGSHINE",
+    "company_name": "Ring Shine Textiles Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "45",
+    "trading_code": "SAFKOSPINN",
+    "company_name": "Safko Spinnings Mills Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "46",
+    "trading_code": "SHYAMPSUG",
+    "company_name": "Shyampur Sugar Mills Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "47",
+    "trading_code": "SIBL",
+    "company_name": "Social Islami Bank PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "48",
+    "trading_code": "SONARGAON",
+    "company_name": "Sonargaon Textiles Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "49",
+    "trading_code": "STANCERAM",
+    "company_name": "Standard Ceramic Industries Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "50",
+    "trading_code": "SUNLIFEINS",
+    "company_name": "Sunlife Insurance Company Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "51",
+    "trading_code": "TALLUSPIN",
+    "company_name": "Tallu Spinning Mills Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "52",
+    "trading_code": "DACCADYE",
+    "company_name": "The Dacca Dyeing & Manufacturing Co.Ltd.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "53",
+    "trading_code": "TUNGHAI",
+    "company_name": "Tung Hai Knitting & Dyeing Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "54",
+    "trading_code": "UNIONBANK",
+    "company_name": "Union Bank PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "55",
+    "trading_code": "UNIONCAP",
+    "company_name": "Union Capital Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "56",
+    "trading_code": "USMANIAGL",
+    "company_name": "Usmania Glass Sheet Factory Limited",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "57",
+    "trading_code": "ZAHEENSPIN",
+    "company_name": "Zaheen Spinning PLC.",
+    "going_concern_threat_status": "Yes"
+  },
+  {
+    "#": "58",
+    "trading_code": "ZEALBANGLA",
+    "company_name": "Zeal Bangla Sugar Mills Ltd.",
+    "going_concern_threat_status": "Yes"
+  }
+]

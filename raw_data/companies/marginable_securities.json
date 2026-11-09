@@ -1,0 +1,890 @@
+[
+  {
+    "#": "1",
+    "trading_code": "ACIFORMULA",
+    "company_name": "ACI Formulations PLC",
+    "category": "A"
+  },
+  {
+    "#": "2",
+    "trading_code": "ACMELAB",
+    "company_name": "The ACME Laboratories Limited",
+    "category": "A"
+  },
+  {
+    "#": "3",
+    "trading_code": "ADNTEL",
+    "company_name": "ADN Telecom Limited",
+    "category": "A"
+  },
+  {
+    "#": "4",
+    "trading_code": "AGNISYSL",
+    "company_name": "Agni Systems PLC.",
+    "category": "B"
+  },
+  {
+    "#": "5",
+    "trading_code": "AGRANINS",
+    "company_name": "Agrani Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "6",
+    "trading_code": "ANWARGALV",
+    "company_name": "Anwar Galvanizing Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "7",
+    "trading_code": "APEXFOODS",
+    "company_name": "Apex Foods Limited",
+    "category": "A"
+  },
+  {
+    "#": "8",
+    "trading_code": "APEXFOOT",
+    "company_name": "Apex Footwear Limited",
+    "category": "A"
+  },
+  {
+    "#": "9",
+    "trading_code": "ARGONDENIM",
+    "company_name": "Argon Denims Limited",
+    "category": "A"
+  },
+  {
+    "#": "10",
+    "trading_code": "ASIAINS",
+    "company_name": "Asia Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "11",
+    "trading_code": "ASIAPACINS",
+    "company_name": "Asia Pacific General Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "12",
+    "trading_code": "ASIATICLAB",
+    "company_name": "Asiatic Laboratories Limited",
+    "category": "A"
+  },
+  {
+    "#": "13",
+    "trading_code": "BANKASIA",
+    "company_name": "Bank Asia PLC.",
+    "category": "A"
+  },
+  {
+    "#": "14",
+    "trading_code": "BATASHOE",
+    "company_name": "Bata Shoe Company (Bangladesh) Limited",
+    "category": "A"
+  },
+  {
+    "#": "15",
+    "trading_code": "BATBC",
+    "company_name": "British American Tobacco Bangladesh Company Limited",
+    "category": "A"
+  },
+  {
+    "#": "16",
+    "trading_code": "BDCOM",
+    "company_name": "BDCOM Online Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "17",
+    "trading_code": "BEACONPHAR",
+    "company_name": "Beacon Pharmaceuticals PLC",
+    "category": "A"
+  },
+  {
+    "#": "18",
+    "trading_code": "BENGALWTL",
+    "company_name": "Bengal Windsor Thermoplastics PLC.",
+    "category": "B"
+  },
+  {
+    "#": "19",
+    "trading_code": "BERGERPBL",
+    "company_name": "Berger Paints Bangladesh Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "20",
+    "trading_code": "BGIC",
+    "company_name": "Bangladesh General Insurance Company PLC.",
+    "category": "A"
+  },
+  {
+    "#": "21",
+    "trading_code": "BNIPLC",
+    "company_name": "Bangladesh National Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "22",
+    "trading_code": "BPPL",
+    "company_name": "Baraka Patenga Power Limited",
+    "category": "B"
+  },
+  {
+    "#": "23",
+    "trading_code": "BRACBANK",
+    "company_name": "BRAC Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "24",
+    "trading_code": "BSC",
+    "company_name": "Bangladesh Shipping Corporation",
+    "category": "A"
+  },
+  {
+    "#": "25",
+    "trading_code": "BSCPLC",
+    "company_name": "Bangladesh Submarine Cables PLC",
+    "category": "A"
+  },
+  {
+    "#": "26",
+    "trading_code": "BSRMLTD",
+    "company_name": "Bangladesh Steel Re-Rolling Mills Limited",
+    "category": "A"
+  },
+  {
+    "#": "27",
+    "trading_code": "BSRMSTEEL",
+    "company_name": "BSRM Steels Limited",
+    "category": "A"
+  },
+  {
+    "#": "28",
+    "trading_code": "BXPHARMA",
+    "company_name": "Beximco Pharmaceuticals PLC.",
+    "category": "A"
+  },
+  {
+    "#": "29",
+    "trading_code": "CENTRALINS",
+    "company_name": "Central Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "30",
+    "trading_code": "CITYBANK",
+    "company_name": "City Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "31",
+    "trading_code": "CITYGENINS",
+    "company_name": "City Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "32",
+    "trading_code": "CONFIDCEM",
+    "company_name": "Confidence Cement PLC.",
+    "category": "A"
+  },
+  {
+    "#": "33",
+    "trading_code": "CONTININS",
+    "company_name": "Continental Insurance PLC.",
+    "category": "B"
+  },
+  {
+    "#": "34",
+    "trading_code": "COPPERTECH",
+    "company_name": "Coppertech Industries Limited",
+    "category": "B"
+  },
+  {
+    "#": "35",
+    "trading_code": "CROWNCEMNT",
+    "company_name": "Crown Cement PLC.",
+    "category": "A"
+  },
+  {
+    "#": "36",
+    "trading_code": "CRYSTALINS",
+    "company_name": "Crystal Insurance Company Limited",
+    "category": "A"
+  },
+  {
+    "#": "37",
+    "trading_code": "CVOPRL",
+    "company_name": "CVO Petrochemical Refinery PLC.",
+    "category": "A"
+  },
+  {
+    "#": "38",
+    "trading_code": "DBH",
+    "company_name": "DBH Finance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "39",
+    "trading_code": "DHAKABANK",
+    "company_name": "Dhaka Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "40",
+    "trading_code": "DHAKAINS",
+    "company_name": "Dhaka Insurance Limited",
+    "category": "A"
+  },
+  {
+    "#": "41",
+    "trading_code": "DOREENPWR",
+    "company_name": "Doreen Power Generations and Systems Limited",
+    "category": "A"
+  },
+  {
+    "#": "42",
+    "trading_code": "DUTCHBANGL",
+    "company_name": "Dutch-Bangla Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "43",
+    "trading_code": "EASTERNINS",
+    "company_name": "Eastern Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "44",
+    "trading_code": "EASTLAND",
+    "company_name": "Eastland Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "45",
+    "trading_code": "EBL",
+    "company_name": "Eastern Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "46",
+    "trading_code": "EGEN",
+    "company_name": "eGeneration PLC.",
+    "category": "B"
+  },
+  {
+    "#": "47",
+    "trading_code": "EHL",
+    "company_name": "Eastern Housing Limited",
+    "category": "A"
+  },
+  {
+    "#": "48",
+    "trading_code": "EIL",
+    "company_name": "Express Insurance Limited",
+    "category": "B"
+  },
+  {
+    "#": "49",
+    "trading_code": "ENVOYTEX",
+    "company_name": "Envoy Textiles Limited",
+    "category": "A"
+  },
+  {
+    "#": "50",
+    "trading_code": "FEDERALINS",
+    "company_name": "Federal Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "51",
+    "trading_code": "FINEFOODS",
+    "company_name": "Fine Foods Limited",
+    "category": "A"
+  },
+  {
+    "#": "52",
+    "trading_code": "GENEXIL",
+    "company_name": "Genex Infosys PLC",
+    "category": "B"
+  },
+  {
+    "#": "53",
+    "trading_code": "GLOBALINS",
+    "company_name": "Global Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "54",
+    "trading_code": "GP",
+    "company_name": "Grameenphone Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "55",
+    "trading_code": "GREENDELT",
+    "company_name": "Green Delta Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "56",
+    "trading_code": "HWAWELLTEX",
+    "company_name": "Hwa Well Textiles (BD) PLC.",
+    "category": "A"
+  },
+  {
+    "#": "57",
+    "trading_code": "IBNSINA",
+    "company_name": "The IBN SINA  Pharmaceutical Industry PLC",
+    "category": "A"
+  },
+  {
+    "#": "58",
+    "trading_code": "ICICL",
+    "company_name": "Islami Commercial Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "59",
+    "trading_code": "IDLC",
+    "company_name": "IDLC Finance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "60",
+    "trading_code": "INDEXAGRO",
+    "company_name": "Index Agro Industries Limited",
+    "category": "A"
+  },
+  {
+    "#": "61",
+    "trading_code": "IPDC",
+    "company_name": "IPDC Finance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "62",
+    "trading_code": "ISLAMIINS",
+    "company_name": "Islami Insurance Bangladesh Limited",
+    "category": "A"
+  },
+  {
+    "#": "63",
+    "trading_code": "ITC",
+    "company_name": "IT Consultants PLC.",
+    "category": "A"
+  },
+  {
+    "#": "64",
+    "trading_code": "JAMUNABANK",
+    "company_name": "Jamuna Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "65",
+    "trading_code": "JAMUNAOIL",
+    "company_name": "Jamuna Oil PLC.",
+    "category": "A"
+  },
+  {
+    "#": "66",
+    "trading_code": "JANATAINS",
+    "company_name": "Janata Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "67",
+    "trading_code": "KARNAPHULI",
+    "company_name": "Karnaphuli Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "68",
+    "trading_code": "KAY&QUE",
+    "company_name": "Kay & Que (Bangladesh) Ltd.",
+    "category": "B"
+  },
+  {
+    "#": "69",
+    "trading_code": "KDSALTD",
+    "company_name": "KDS Accessories Limited",
+    "category": "A"
+  },
+  {
+    "#": "70",
+    "trading_code": "KOHINOOR",
+    "company_name": "Kohinoor Chemical Company (Bangladesh) PLC.",
+    "category": "A"
+  },
+  {
+    "#": "71",
+    "trading_code": "LANKABAFIN",
+    "company_name": "LankaBangla Finance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "72",
+    "trading_code": "LHB",
+    "company_name": "LafargeHolcim Bangladesh PLC.",
+    "category": "A"
+  },
+  {
+    "#": "73",
+    "trading_code": "LINDEBD",
+    "company_name": "Linde Bangladesh Limited",
+    "category": "A"
+  },
+  {
+    "#": "74",
+    "trading_code": "LOVELLO",
+    "company_name": "Taufika Foods and Lovello Ice-cream PLC",
+    "category": "A"
+  },
+  {
+    "#": "75",
+    "trading_code": "MAGURAPLEX",
+    "company_name": "Magura Multiplex PLC.",
+    "category": "A"
+  },
+  {
+    "#": "76",
+    "trading_code": "MALEKSPIN",
+    "company_name": "Malek Spinning Mills PLC.",
+    "category": "A"
+  },
+  {
+    "#": "77",
+    "trading_code": "MARICO",
+    "company_name": "Marico Bangladesh Limited",
+    "category": "A"
+  },
+  {
+    "#": "78",
+    "trading_code": "MATINSPINN",
+    "company_name": "Matin Spinning Mills PLC",
+    "category": "A"
+  },
+  {
+    "#": "79",
+    "trading_code": "MEGHNAINS",
+    "company_name": "Meghna Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "80",
+    "trading_code": "MEGHNALIFE",
+    "company_name": "Meghna Life Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "81",
+    "trading_code": "MERCINS",
+    "company_name": "Mercantile Islami Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "82",
+    "trading_code": "MHSML",
+    "company_name": "Mozaffar Hossain Spinning Mills Ltd.",
+    "category": "B"
+  },
+  {
+    "#": "83",
+    "trading_code": "MIDLANDBNK",
+    "company_name": "Midland Bank PLC.",
+    "category": "B"
+  },
+  {
+    "#": "84",
+    "trading_code": "MJLBD",
+    "company_name": "MJL Bangladesh PLC.",
+    "category": "A"
+  },
+  {
+    "#": "85",
+    "trading_code": "MONOSPOOL",
+    "company_name": "Monospool Bangladesh PLC",
+    "category": "A"
+  },
+  {
+    "#": "86",
+    "trading_code": "MPETROLEUM",
+    "company_name": "Meghna Petroleum PLC.",
+    "category": "A"
+  },
+  {
+    "#": "87",
+    "trading_code": "MTB",
+    "company_name": "Mutual Trust Bank PLC",
+    "category": "A"
+  },
+  {
+    "#": "88",
+    "trading_code": "NAHEEACP",
+    "company_name": "Nahee Aluminum Composite Panel PLC.",
+    "category": "B"
+  },
+  {
+    "#": "89",
+    "trading_code": "NATLIFEINS",
+    "company_name": "National Life Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "90",
+    "trading_code": "NAVANAPHAR",
+    "company_name": "Navana Pharmaceuticals PLC",
+    "category": "A"
+  },
+  {
+    "#": "91",
+    "trading_code": "NCCBANK",
+    "company_name": "National Credit and Commerce Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "92",
+    "trading_code": "NHFIL",
+    "company_name": "National Housing Finance PLC",
+    "category": "A"
+  },
+  {
+    "#": "93",
+    "trading_code": "NITOLINS",
+    "company_name": "Nitol Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "94",
+    "trading_code": "NORTHRNINS",
+    "company_name": "Northern Islami Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "95",
+    "trading_code": "OLYMPIC",
+    "company_name": "Olympic Industries PLC.",
+    "category": "A"
+  },
+  {
+    "#": "96",
+    "trading_code": "PADMAOIL",
+    "company_name": "Padma Oil PLC.",
+    "category": "A"
+  },
+  {
+    "#": "97",
+    "trading_code": "PARAMOUNT",
+    "company_name": "Paramount Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "98",
+    "trading_code": "PEOPLESINS",
+    "company_name": "Peoples Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "99",
+    "trading_code": "PHARMAID",
+    "company_name": "Pharma Aids Limited",
+    "category": "A"
+  },
+  {
+    "#": "100",
+    "trading_code": "PHENIXINS",
+    "company_name": "Phoenix Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "101",
+    "trading_code": "PIONEERINS",
+    "company_name": "Pioneer Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "102",
+    "trading_code": "POPULARLIF",
+    "company_name": "Popular Life Insurance Co. Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "103",
+    "trading_code": "PRAGATIINS",
+    "company_name": "Pragati Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "104",
+    "trading_code": "PRIMEBANK",
+    "company_name": "Prime Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "105",
+    "trading_code": "PRIMEINSUR",
+    "company_name": "Prime Islami Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "106",
+    "trading_code": "PROVATIINS",
+    "company_name": "Provati Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "107",
+    "trading_code": "PTL",
+    "company_name": "Paramount Textile PLC.",
+    "category": "A"
+  },
+  {
+    "#": "108",
+    "trading_code": "PUBALIBANK",
+    "company_name": "Pubali Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "109",
+    "trading_code": "PURABIGEN",
+    "company_name": "Purabi Gen. Insurance Company Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "110",
+    "trading_code": "QUASEMIND",
+    "company_name": "Quasem Industries Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "111",
+    "trading_code": "RANFOUNDRY",
+    "company_name": "Rangpur Foundry Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "112",
+    "trading_code": "RECKITTBEN",
+    "company_name": "Reckitt Benckiser (Bangladesh) PLC",
+    "category": "A"
+  },
+  {
+    "#": "113",
+    "trading_code": "RELIANCINS",
+    "company_name": "Reliance Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "114",
+    "trading_code": "RENATA",
+    "company_name": "Renata PLC",
+    "category": "A"
+  },
+  {
+    "#": "115",
+    "trading_code": "REPUBLIC",
+    "company_name": "Republic Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "116",
+    "trading_code": "ROBI",
+    "company_name": "Robi Axiata PLC.",
+    "category": "A"
+  },
+  {
+    "#": "117",
+    "trading_code": "RUNNERAUTO",
+    "company_name": "Runner Automobiles PLC",
+    "category": "A"
+  },
+  {
+    "#": "118",
+    "trading_code": "RUPALIINS",
+    "company_name": "Rupali Insurance Company Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "119",
+    "trading_code": "RUPALILIFE",
+    "company_name": "Rupali Life Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "120",
+    "trading_code": "SAIHAMCOT",
+    "company_name": "Saiham Cotton Mills Limited",
+    "category": "B"
+  },
+  {
+    "#": "121",
+    "trading_code": "SALVO",
+    "company_name": "Salvo Organic Industries PLC.",
+    "category": "B"
+  },
+  {
+    "#": "122",
+    "trading_code": "SANDHANINS",
+    "company_name": "Sandhani Life Insurance Company Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "123",
+    "trading_code": "SAPORTL",
+    "company_name": "Summit Alliance Port Limited",
+    "category": "A"
+  },
+  {
+    "#": "124",
+    "trading_code": "SHAHJABANK",
+    "company_name": "Shahjalal Islami Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "125",
+    "trading_code": "SHASHADNIM",
+    "company_name": "Shasha Denims PLC.",
+    "category": "B"
+  },
+  {
+    "#": "126",
+    "trading_code": "SICL",
+    "company_name": "Sikder Insurance PLC.",
+    "category": "B"
+  },
+  {
+    "#": "127",
+    "trading_code": "SIMTEX",
+    "company_name": "Simtex Industries PLC.",
+    "category": "A"
+  },
+  {
+    "#": "128",
+    "trading_code": "SINOBANGLA",
+    "company_name": "Sinobangla Industries Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "129",
+    "trading_code": "SIPLC",
+    "company_name": "Sena Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "130",
+    "trading_code": "SONALIANSH",
+    "company_name": "Sonali Aansh Industries Limited",
+    "category": "A"
+  },
+  {
+    "#": "131",
+    "trading_code": "SONALIPAPR",
+    "company_name": "Sonali Paper & Board Mills Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "132",
+    "trading_code": "SOUTHEASTB",
+    "company_name": "Southeast Bank PLC",
+    "category": "A"
+  },
+  {
+    "#": "133",
+    "trading_code": "SPCL",
+    "company_name": "Shahjibazar Power Co. Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "134",
+    "trading_code": "SQUARETEXT",
+    "company_name": "Square Textiles PLC.",
+    "category": "A"
+  },
+  {
+    "#": "135",
+    "trading_code": "SQURPHARMA",
+    "company_name": "Square Pharmaceuticals PLC.",
+    "category": "A"
+  },
+  {
+    "#": "136",
+    "trading_code": "STANDARINS",
+    "company_name": "Standard Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "137",
+    "trading_code": "SUMITPOWER",
+    "company_name": "Summit Power Limited",
+    "category": "A"
+  },
+  {
+    "#": "138",
+    "trading_code": "TAKAFULINS",
+    "company_name": "Takaful Islami Insurance PLC",
+    "category": "A"
+  },
+  {
+    "#": "139",
+    "trading_code": "TAMIJTEX",
+    "company_name": "Tamijuddin Textile Mills PLC",
+    "category": "A"
+  },
+  {
+    "#": "140",
+    "trading_code": "TECHNODRUG",
+    "company_name": "Techno Drugs Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "141",
+    "trading_code": "TRUSTBANK",
+    "company_name": "Trust Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "142",
+    "trading_code": "UNIONINS",
+    "company_name": "Union Insurance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "143",
+    "trading_code": "UNIQUEHRL",
+    "company_name": "Unique Hotel & Resorts PLC",
+    "category": "A"
+  },
+  {
+    "#": "144",
+    "trading_code": "UNITEDFIN",
+    "company_name": "United Finance PLC.",
+    "category": "A"
+  },
+  {
+    "#": "145",
+    "trading_code": "UNITEDINS",
+    "company_name": "United Insurance Company Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "146",
+    "trading_code": "UPGDCL",
+    "company_name": "United Power Generation & Distribution Company Ltd.",
+    "category": "A"
+  },
+  {
+    "#": "147",
+    "trading_code": "UTTARABANK",
+    "company_name": "Uttara Bank PLC.",
+    "category": "A"
+  },
+  {
+    "#": "148",
+    "trading_code": "WALTONHIL",
+    "company_name": "Walton Hi-Tech Industries PLC",
+    "category": "A"
+  }
+]
