@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 
 class PostgresAlchemyStorage(BaseStorage):
     """
-    Enterprise PostgreSQL persistence engine for Promise ERP.
+    Enterprise PostgreSQL persistence engine for DSE Data Engine.
     Leverages SQLAlchemy 2.0 and PostgreSQL native upserts.
     """
 
@@ -113,33 +113,39 @@ class PostgresAlchemyStorage(BaseStorage):
                 sess.execute(stmt)
 
     def save_daily_eod(self, records: List[DailyEOD]) -> None:
+        if not records:
+            return
         with self.db.session() as sess:
-            for r in records:
-                stmt = insert(DailyEODModel).values(
-                    symbol=r.symbol,
-                    date=r.date,
-                    open=r.open,
-                    high=r.high,
-                    low=r.low,
-                    close=r.close,
-                    ycp=r.ycp,
-                    volume=r.volume or 0,
-                    value_mn=r.value_mn or 0.0,
-                    trades=r.trades or 0,
-                ).on_conflict_do_update(
-                    index_elements=[DailyEODModel.symbol, DailyEODModel.date],
-                    set_={
-                        "open": r.open,
-                        "high": r.high,
-                        "low": r.low,
-                        "close": r.close,
-                        "ycp": r.ycp,
-                        "volume": r.volume or 0,
-                        "value_mn": r.value_mn or 0.0,
-                        "trades": r.trades or 0,
-                    },
-                )
-                sess.execute(stmt)
+            val_list = [
+                {
+                    "symbol": r.symbol,
+                    "date": r.date,
+                    "open": r.open,
+                    "high": r.high,
+                    "low": r.low,
+                    "close": r.close,
+                    "ycp": r.ycp,
+                    "volume": r.volume or 0,
+                    "value_mn": r.value_mn or 0.0,
+                    "trades": r.trades or 0,
+                }
+                for r in records
+            ]
+            stmt = insert(DailyEODModel)
+            stmt = stmt.on_conflict_do_update(
+                index_elements=[DailyEODModel.symbol, DailyEODModel.date],
+                set_={
+                    "open": stmt.excluded.open,
+                    "high": stmt.excluded.high,
+                    "low": stmt.excluded.low,
+                    "close": stmt.excluded.close,
+                    "ycp": stmt.excluded.ycp,
+                    "volume": stmt.excluded.volume,
+                    "value_mn": stmt.excluded.value_mn,
+                    "trades": stmt.excluded.trades,
+                },
+            )
+            sess.execute(stmt, val_list)
 
     def save_company_profile(self, profile: CompanyProfile) -> None:
         now = datetime.now(timezone.utc)

@@ -1,6 +1,6 @@
 # AGENTS.md — Development Guidelines & Coding Standards
 
-This document establishes the architectural principles, coding conventions, database rules, and workflows for **Promise ERP**. All AI agents and developers working in this repository must adhere to these guidelines to ensure consistency, reliability, and maintainability.
+This document establishes the architectural principles, coding conventions, database rules, and workflows for **DSE Data Engine**. All AI agents and developers working in this repository must adhere to these guidelines to ensure consistency, reliability, and maintainability.
 
 ---
 

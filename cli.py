@@ -188,6 +188,10 @@ def main():
     p_company.add_argument("--symbol", help="Specific ticker symbol (omits to sync all)")
     p_company.add_argument("--fresh", action="store_true", help="Ignore checkpoint and sync from beginning")
 
+    # backfill-2yr command
+    p_b2 = subparsers.add_parser("backfill-2yr", help="Run complete 2-year backfill across all 4 phases")
+    p_b2.add_argument("--skip-phase", type=int, nargs="*", default=[], help="Phase numbers to skip (1=Summary, 2=News, 3=EOD, 4=Fundamentals)")
+
     # status command
     subparsers.add_parser("status", help="Show database record counts")
 
@@ -212,6 +216,10 @@ def main():
         cmd_live(scraper, args)
     elif args.command == "backfill":
         cmd_backfill(scraper, args)
+    elif args.command == "backfill-2yr":
+        from dse_scraper.pipeline.backfill_2year import TwoYearBackfillPipeline
+        pipeline = TwoYearBackfillPipeline(config=config, storage=storage if isinstance(storage, PostgresAlchemyStorage) else None)
+        pipeline.run_all(skip_phases=args.skip_phase)
     elif args.command == "company":
         cmd_company(scraper, args)
     elif args.command == "status":
