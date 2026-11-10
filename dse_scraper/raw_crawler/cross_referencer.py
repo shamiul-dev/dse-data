@@ -76,10 +76,12 @@ class CrossReferencer:
                 if sym:
                     symbols_index[sym]["company_name"] = item.get("company_name")
                     symbols_index[sym]["circuit_breaker"] = {
+                        "close_price": item.get("close_price"),
                         "lower_limit": item.get("lower_limit"),
                         "upper_limit": item.get("upper_limit"),
                         "breaker_pct": item.get("breaker_pct"),
                         "tick_size": item.get("tick_size"),
+                        "open_adj_price": item.get("open_adj_price"),
                     }
 
         # 4. Marginable Securities (Companies)

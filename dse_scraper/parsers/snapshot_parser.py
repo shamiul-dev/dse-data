@@ -5,11 +5,33 @@ Deterministic, isolated from network and database operations.
 
 from datetime import datetime, timezone
 import json
-from typing import Any, Dict, List, Union
+import logging
+import re
+from typing import Any, Dict, List, Optional, Union
+from zoneinfo import ZoneInfo
 
-from dse_scraper.core.normalizers import safe_float, safe_int, safe_str
+from dse_scraper.core.normalizers import safe_date, safe_float, safe_int, safe_str
 from dse_scraper.models.quote import IndexQuote, InstrumentQuote
 from dse_scraper.models.snapshot import LiveSnapshot, MarketTotals
+
+logger = logging.getLogger(__name__)
+
+
+def parse_exchange_trade_time(val: Any) -> Optional[datetime]:
+    """
+    Parses DSE tradeTime string, e.g. 'Nov 10, 2026 at 12:24 PM'
+    Local time is Asia/Dhaka (+06:00), converted to UTC.
+    """
+    if not val:
+        return None
+    s = str(val).strip()
+    try:
+        clean = re.sub(r"\s+at\s+", " ", s)
+        dt = datetime.strptime(clean, "%b %d, %Y %I:%M %p")
+        dhaka_tz = ZoneInfo("Asia/Dhaka")
+        return dt.replace(tzinfo=dhaka_tz).astimezone(timezone.utc)
+    except Exception:
+        return None
 
 
 def parse_live_snapshot(payload: Union[str, bytes, Dict[str, Any]]) -> LiveSnapshot:
@@ -45,13 +67,30 @@ def parse_live_snapshot(payload: Union[str, bytes, Dict[str, Any]]) -> LiveSnaps
                 )
             )
 
-    # 2. Parse Market Totals
+    # 2. Parse Market Totals & Provenance Timestamps
+    session_data = market_data.get("session") or {}
+    feed_date = safe_date(session_data.get("date"))
+    session_date = safe_date(session_data.get("sessionDate"))
+
     totals_data = market_data.get("totals") or {}
+    raw_trade_time = safe_str(totals_data.get("tradeTime")) or None
+    exchange_trade_time = parse_exchange_trade_time(raw_trade_time)
+
+    if exchange_trade_time and feed_date and session_date:
+        trade_date = exchange_trade_time.astimezone(ZoneInfo("Asia/Dhaka")).date()
+        if trade_date != feed_date and trade_date != session_date:
+            logger.warning(
+                "DSE timestamp anomaly: tradeTime date (%s) != feed date (%s) or sessionDate (%s)",
+                trade_date, feed_date, session_date
+            )
+
     totals = MarketTotals(
         trades=safe_int(totals_data.get("trades"), 0),
         volume=safe_int(totals_data.get("volume"), 0),
         turnover_mn=safe_float(totals_data.get("turnover"), 0.0),
         market_cap=safe_float(totals_data.get("marketCap")),
+        trade_time_raw=raw_trade_time,
+        exchange_trade_time=exchange_trade_time,
     )
 
     # 3. Parse Instrument Quotes
@@ -112,11 +151,17 @@ def parse_live_snapshot(payload: Union[str, bytes, Dict[str, Any]]) -> LiveSnaps
                 board=safe_str(get_val("board")) or None,
                 sector=safe_str(get_val("sector")) or None,
                 asset_type=safe_str(get_val("assetType")) or None,
+                exchange_trade_time=exchange_trade_time,
+                session_date=session_date,
+                feed_date=feed_date,
             )
         )
 
     return LiveSnapshot(
         timestamp=now,
+        exchange_trade_time=exchange_trade_time,
+        session_date=session_date,
+        feed_date=feed_date,
         indices=indices,
         totals=totals,
         quotes=quotes,

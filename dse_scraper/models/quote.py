@@ -1,3 +1,4 @@
+from datetime import date as dt_date, datetime
 from typing import Optional
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -33,4 +34,8 @@ class InstrumentQuote(BaseModel):
     board: Optional[str] = Field(None, description="Board: PUBLIC, DEBT, etc.")
     sector: Optional[str] = Field(None, description="Sector")
     asset_type: Optional[str] = Field(None, description="Asset type")
+    exchange_trade_time: Optional[datetime] = Field(None, description="Exchange trade timestamp (UTC)")
+    session_date: Optional[dt_date] = Field(None, description="Session date from feed")
+    feed_date: Optional[dt_date] = Field(None, description="Active trading date from feed")
+    fetch_id: Optional[int] = Field(None, description="Raw fetch audit identifier")
 

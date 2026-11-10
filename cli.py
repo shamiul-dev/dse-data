@@ -149,16 +149,21 @@ def cmd_status(scraper: DSEScraper, args: argparse.Namespace) -> None:
             from sqlalchemy import text
             print("\n=== PostgreSQL Database Status (dse_db) ===")
             tables = [
+                "securities",
+                "security_attributes_history",
                 "instruments",
                 "quotes",
                 "circuit_breakers",
                 "financial_filings",
                 "going_concern_threats",
+                "going_concern_history",
                 "news_announcements",
                 "trec_brokers",
                 "market_summaries",
                 "daily_eod",
                 "company_profiles",
+                "company_fundamentals_history",
+                "raw_fetches",
             ]
             for tbl in tables:
                 cnt = sess.execute(text(f"SELECT count(*) FROM {tbl}")).scalar()

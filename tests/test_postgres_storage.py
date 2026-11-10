@@ -31,3 +31,16 @@ def test_postgres_alchemy_storage(sample_snapshot):
     sym_map = {q.symbol: q for q in quotes}
     assert "1JANATAMF" in sym_map
 
+    # 3. Test Phase 1 Provenance & Idempotency
+    janata = sym_map["1JANATAMF"]
+    assert janata.exchange_trade_time is not None
+    assert janata.session_date is not None
+    assert janata.feed_date is not None
+    assert janata.fetch_id is not None
+
+    count_before = len(storage.get_latest_quotes())
+    # Save same snapshot again -> must NOT duplicate rows due to ON CONFLICT DO NOTHING
+    storage.save_snapshot(sample_snapshot)
+    count_after = len(storage.get_latest_quotes())
+    assert count_before == count_after
+
