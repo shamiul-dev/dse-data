@@ -20,6 +20,90 @@ logging.basicConfig(
 )
 
 
+def cmd_sync(scraper: DSEScraper, args: argparse.Namespace) -> None:
+    """
+    Intelligent daily catch-up and live synchronization command.
+    1. Checks the latest recorded EOD date in storage and backfills missing historical days.
+    2. Updates recent news disclosures.
+    3. If trading hours are active, captures the live market snapshot.
+    """
+    print("\n=======================================================")
+    print("DSE Intelligent Sync & Daily Catch-Up")
+    print("=======================================================\n")
+
+    today = date.today()
+
+    # 1. Determine last EOD date in storage
+    max_date = None
+    if isinstance(scraper.storage, PostgresAlchemyStorage):
+        with scraper.storage.db.session() as sess:
+            from sqlalchemy import text
+            max_date = sess.execute(text("SELECT max(date) FROM daily_eod")).scalar()
+    elif isinstance(scraper.storage, SQLiteStorage):
+        with scraper.storage._connection() as conn:
+            row = conn.execute("SELECT max(date) FROM daily_eod").fetchone()
+            if row and row[0]:
+                max_date = date.fromisoformat(row[0])
+
+    # 2. Backfill missing historical EOD days
+    if max_date:
+        if max_date < today:
+            start_date = (max_date + timedelta(days=1)).isoformat()
+            end_date = today.isoformat()
+            print(f"Step 1: Found gap in daily EOD history ({max_date} -> {today}). Backfilling...")
+            count = scraper.history.backfill(from_date=start_date, to_date=end_date)
+            print(f"  -> Ingested {count:,} historical EOD records.")
+        else:
+            print(f"Step 1: Daily EOD is up-to-date (latest: {max_date}).")
+    else:
+        start_date = (today - timedelta(days=30)).isoformat()
+        print(f"Step 1: No previous EOD data found. Backfilling past 30 days ({start_date} -> {today})...")
+        count = scraper.history.backfill(from_date=start_date, to_date=today.isoformat())
+        print(f"  -> Ingested {count:,} historical EOD records.")
+
+    # 3. Ingest recent news
+    print("\nStep 2: Checking latest corporate disclosures & news...")
+    from dse_scraper.raw_crawler.news_collector import NewsCollector
+    news_col = NewsCollector(scraper.client, Path("raw_data"))
+    news_col.collect_recent_news(days=3)
+    if isinstance(scraper.storage, PostgresAlchemyStorage):
+        news_file = Path("raw_data/news/news_and_announcements.json")
+        if news_file.exists():
+            import json
+            items = json.loads(news_file.read_text(encoding="utf-8"))
+            ingested_news = scraper.storage.ingest_news(items)
+            print(f"  -> Ingested/updated {ingested_news:,} recent news articles.")
+
+    # 4. Check market trading hours and pull live snapshot
+    from datetime import datetime, timezone
+    utc_now = datetime.now(timezone.utc)
+    dhaka_hour = (utc_now.hour + 6) % 24
+    dhaka_minute = utc_now.minute
+    # DSE trading days: Sunday (6), Monday (0), Tuesday (1), Wednesday (2), Thursday (3)
+    is_trading_day = utc_now.weekday() in (6, 0, 1, 2, 3)
+    dhaka_time_val = dhaka_hour * 60 + dhaka_minute
+    is_trading_hours = (10 * 60) <= dhaka_time_val <= (14 * 60 + 30)
+
+    print("\nStep 3: Checking Live Market Status...")
+    if is_trading_day and is_trading_hours:
+        print(f"  Market is currently OPEN ({dhaka_hour:02d}:{dhaka_minute:02d} BST). Fetching live snapshot...")
+        snapshot = scraper.live.sync()
+        print(f"  Captured live prices for {len(snapshot.quotes)} securities.")
+        for idx in snapshot.indices:
+            print(f"    {idx.key}: {idx.value:,.2f} ({idx.change:+.2f}, {idx.percent:+.2f}%)")
+        if snapshot.totals:
+            print(f"    Turnover: {snapshot.totals.turnover_mn:,.2f} mn BDT | Trades: {snapshot.totals.trades:,}")
+    else:
+        print(f"  Market is currently CLOSED (Dhaka time: {dhaka_hour:02d}:{dhaka_minute:02d} BST).")
+        if is_trading_day and dhaka_time_val > (14 * 60 + 30):
+            print("  Trading closed for today. Attempting to lock in today's official settlement...")
+            scraper.history.backfill(from_date=today.isoformat(), to_date=today.isoformat())
+
+    print("\n=======================================================")
+    print("DSE Sync Completed Successfully!")
+    print("=======================================================\n")
+
+
 def cmd_live(scraper: DSEScraper, args: argparse.Namespace) -> None:
     print("Fetching live market snapshot from DSE...")
     snapshot = scraper.live.sync()
@@ -173,6 +257,9 @@ def main():
     p_pg.add_argument("--raw", default="raw_data", help="Directory containing raw JSON files")
     p_pg.add_argument("--url", help="PostgreSQL connection URL override")
 
+    # sync command
+    subparsers.add_parser("sync", help="Intelligent daily catch-up and live synchronization")
+
     # live command
     subparsers.add_parser("live", help="Capture live market snapshot")
 
@@ -208,7 +295,9 @@ def main():
 
     scraper = DSEScraper(storage=storage, config=config)
 
-    if args.command == "crawl-all":
+    if args.command == "sync":
+        cmd_sync(scraper, args)
+    elif args.command == "crawl-all":
         cmd_crawl_all(config, args)
     elif args.command == "load-postgres":
         cmd_load_postgres(config, args)

@@ -72,22 +72,28 @@ postgresql+psycopg://postgres:postgres@127.0.0.1:5432/dse_db
 ## CLI Usage
 
 ```bash
+# Intelligent daily sync (auto-detects missing dates, pulls latest news, and live ticks)
+python cli.py sync
+
 # 1. Crawl all 5 domains into separate raw JSONs and cross-reference
 python cli.py crawl-all
 
 # 2. Ingest raw cross-referenced data into PostgreSQL (dse_db)
 python cli.py load-postgres
 
-# 3. Sync live market snapshot into database
+# 3. Sync live market snapshot into database (during market hours)
 python cli.py live
 
-# 4. Backfill historical daily OHLCV prices (past 30 days)
+# 4. Backfill historical daily OHLCV prices
 python cli.py backfill --days 30
 
-# 5. Sync company fundamentals (balance sheet, PE, shareholding)
+# 5. Run full 2-year backfill across all 4 phases
+python cli.py backfill-2yr
+
+# 6. Sync company fundamentals (balance sheet, PE, shareholding)
 python cli.py company --symbol GP
 
-# 6. Check database status
+# 7. Check database status
 python cli.py status
 ```
 
