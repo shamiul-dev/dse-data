@@ -1,0 +1,39 @@
+# Raw crawled data
+raw_data/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment & credentials
+.env
+.env.*
+!.env.example
+
+# Local SQLite databases
+*.db
+*.sqlite3
+
+# Distribution & Build
+build/
+dist/
+*.egg-info/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
